@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root{
+    /* font */
+    --font-body: "Roboto", sans-serif;
+    /* color */
+    --body-color: #F5F5F5;
+    --blue-color:#0078FF;
+    --white-color: #FFFFFF;
+    --black-color:#1E1E1E;
+
+    --blur-hover: rgba(0, 120, 255, 0.2);
+
+    /* padding */
+    --sec-padding:4rem;
+}
+
+body{
+    font-family: var(--font-body);
+    background-color: var(--body-color);
+}
+
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* ================== NavBar =====================*/
+.navbar{
+    background:
+            linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0))
+}
+.navbar-brand{
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.active::before{
+        content: '';
+            position: absolute;
+            background-color: var(--white-color);
+            width: 50px;
+            border-bottom: 2px solid var(--white-color);
+            bottom: 0;
+            left: 6px;
+            animation: line-moving .4s forwards;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:not(.active):before{
+    content: '';
+    position: absolute;
+    background-color: var(--white-color);
+    width: 0px;
+    border-bottom: 2px solid var(--white-color);
+    bottom: 0;
+    left: 6px;
+    
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:not(.active):hover::before{
+    animation: line-moving .4s forwards;
+
+}
+
+@keyframes line-moving {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+.navbar-toggler-icon{
+    background-image: url(../images/iconmonstr-menu-lined-240.png);
+}
+/* ================== Header =====================*/
+#header{
+    background-image:
+    linear-gradient(rgba(0, 0, 0 ,.5), rgba(0, 0, 0, .4)),
+    url(../images/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header .header-txt> h1{
+    font-size: 4.5rem;
+    color: var(--white-color);
+    
+
+}
+
+#header .header-txt span{
+    color: var(--white-color);
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: var(--white-color);
+}
+
+
+/* ================ portfolio ========================= */
+#portfolio,
+#servcies,
+#info,
+#gallery,
+#blog,
+#contact
+{
+    padding: var(--sec-padding) 0;
+}
+#portfolio .container > .port-info{
+    background-color: var(---white-color);
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#portfolio .container>.port-info .port-img img{
+    overflow: hidden;
+    border-radius: .3125rem;
+}
+
+
+#portfolio .container>.port-info .info-ul li>span{
+    font-weight: 700;
+}
+
+#portfolio .container>.port-info .skill-progress> span{
+
+    font-size: 1.25rem;
+    padding-left: 30px;
+}
+
+#portfolio .container>.port-info .port-txt>h2{
+    position: relative;
+    padding-bottom: .625rem;
+}
+#portfolio .container>.port-info .port-txt>h2::before{
+    content: '';
+    position: absolute;
+    background-color: #0078FF;
+    width: 100px;
+    border-bottom: 3px solid var(--blue-color);
+    bottom: 0;
+}
+
+#portfolio .container>.port-info .port-txt p{
+    font-size: 23px;
+}
+
+
+
+/* ======================= servcies =============== */
+
+#servcies .cards .container .card .icons-div{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 9px solid var(--blue-color);
+    transition: .3s ease-in-out;
+}
+#servcies .cards .container .card:hover .icons-div
+{
+
+    border: 9px solid var(--blur-hover);
+
+}
+
+#servcies .cards .container .card .icons-div .icon-hover{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+#servcies .cards .container .card:hover .icons-div .icon-hover{
+    background-color: var(--blue-color);
+}
+#servcies .cards .container .card:hover .icons-div .icon-hover i{
+    color: var(--white-color);
+}
+
+
+
+#servcies .cards .container .card .card-body .card-text{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#servcies .cards .container .card .card-body .card-title{
+    font-size: 1.4rem;
+}
+
+
+
+#servcies>.servcies-content .p-before,
+#gallery>.gallery-content .p-before,
+#blog>.blog-content .p-before
+{
+    position: relative;
+}
+#servcies> .servcies-content .p-before::after,
+#gallery>.gallery-content .p-before::after,
+#blog>.blog-content .p-before::after
+{
+    content: '';
+    position: absolute;
+    background-color: rgb(0, 120, 255);
+    width: 50px;
+    height: 6px;
+    bottom: -20px;
+    left: 45%;
+}
+
+
+/* =================== info ======================= */
+#info{
+    background-image: linear-gradient(rgba(0, 120, 255,.6), rgba(0, 120, 255,.6)),
+    url(../images/counters-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 50vh;
+}
+
+#info > .container .card > .circle-icon{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255,.5);
+}
+
+/* ================= gallery ===================== */
+
+#gallery .cards .container .card .card-body .card-circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--blue-color);
+}
+
+
+#gallery .cards .container .card .img-div{
+    overflow: hidden;
+}
+#gallery .cards .container .card .img-div img{
+    overflow: hidden;
+    transition: .5s ease-in-out;
+    transform-origin: center center;
+}
+
+#gallery .cards .container .card:hover .img-div img{
+    transform: scale(1.2);
+}
+
+#gallery .cards .container .card .card-body > .card-content .card-text span{
+    font-size: .8rem;
+}
+
+.modal-content{
+    border: none;
+    width: 50rem;
+}
+
+
+
+/* ============== testemonial ========================== */
+
+#testemonial{
+    background-image:
+    linear-gradient(rgba(0, 120, 255, .6), rgba(0, 120, 255, .6)),
+    url(../images/overlay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 90vh;
+}
+
+.my-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50% ;
+}
+.my-img2{
+    width: 150px;
+    height: 170px;
+    border-radius: 50% ;
+}
+
+.carousel-indicators [data-bs-target] {
+
+    width: .625rem;
+    height: .625rem;
+    border-radius: 50%;
+}
+
+
+
+  /* ========================= blog =================*/
+
+
+#blog .container .card .card-img-div h5{
+    position: absolute;
+    bottom: 1%;
+    left: 40%;
+    transform: translate(-50%,-50%);
+} 
+
+#blog .container .card .footer-card-img{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  #blog .container .card .card-footer small a{
+    transition: .5s ease-in-out;
+  }
+  #blog .container .card .card-footer small a:hover{
+    color: var(--blue-color) !important;
+  }
+  .footer-card-img img{
+    width: 100%;
+  }
+
+  /* ================== contact ================ */
+
+  #contact{
+    background-image: 
+    linear-gradient(rgba(0, 120, 255, .6), rgba(0, 120, 255, .6)),
+        url(../images/overlay-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+  }
+
+
+  #contact .container .contact-div h2{
+    position: relative;
+  }
+
+  #contact .container .contact-div  form button{
+    padding: 10px 15px ;
+    border-radius: 3rem;
+  }
+
+        #contact .container .contact-div form input{
+            padding: 1rem;
+        }
+  #contact .container .contact-div h2::after{
+    content: '';
+    width: 100px;
+    bottom: 0;
+    left: 1px;
+    border-bottom: 3px solid var(--blue-color);
+    position: absolute;
+  }
+
+  #contact .container > .contact-div .contact-info .social-icons li a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--blue-color);
+    transition: .5s ease-in-out;
+  }
+
+#contact .container>.contact-div .contact-info .social-icons li a:hover {
+    background-color: var(--blue-color);
+    border: 4px solid rgba(255, 255, 255, 0.7)
+    
+}
+#contact .container>.contact-div .contact-info .social-icons li a:hover i {
+
+    color: var(--white-color);
+}
+
+  /* ================== footer ==================== */
+
+
+  #footer{
+    background: #1C63C9;
+    box-shadow: inset 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+
+
+  /* media query  */
+
+  @media screen and (max-width:1199.98px) {
+#blog .container .card .card-img-div h5 {
+        /* bottom: 1%; */
+        left: 29.5%;
+    }
+
+  }
+  @media screen and (max-width:991.98px) {
+            .navbar-expand-lg .navbar-nav {
+                    background-color: var(--white-color);
+                }
+            
+                .navbar-expand-lg .navbar-nav .nav-link {
+                    color: var(--blue-color);
+                }
+#blog .container .card .card-img-div h5 {
+        bottom: 1%;
+        left: 29.5%;
+    }
+
+  }
+  @media screen and (max-width:767.98px) {
+
+#blog .container .card .card-img-div h5 {
+        bottom: 1%;
+        left: 40%;
+    }
+
+    #contact .container .contact-div form button{
+        width: 100%;
+    }
+  }
