@@ -403,10 +403,6 @@ a{
   /* media query  */
 
   @media screen and (max-width:1199.98px) {
-#blog .container .card .card-img-div h5 {
-        /* bottom: 1%; */
-        left: 29.5%;
-    }
 
   }
   @media screen and (max-width:991.98px) {
@@ -417,18 +413,9 @@ a{
                 .navbar-expand-lg .navbar-nav .nav-link {
                     color: var(--blue-color);
                 }
-#blog .container .card .card-img-div h5 {
-        bottom: 1%;
-        left: 29.5%;
-    }
 
   }
   @media screen and (max-width:767.98px) {
-
-#blog .container .card .card-img-div h5 {
-        bottom: 1%;
-        left: 40%;
-    }
 
     #contact .container .contact-div form button{
         width: 100%;
