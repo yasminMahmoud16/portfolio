@@ -92,6 +92,9 @@ a{
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu>li:hover>.dropdown-submenu {
     display: block;
 }
+.navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item{
+    transition: .4s ease-in-out;
+}
 
 .navbar .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover{
     background-color: var(--blue-color);
